@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import skyWallpaper from './assets/images/skyWallpaper.png';
+import skyWallpaper from '../../assets/images/skyWallpaper.png';
 
 interface BoxProps {
     isLogin: boolean;
