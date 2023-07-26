@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import skyWallpaper from './assets/images/skyWallpaper.png';
 
+interface BoxProps {
+    isLogin: boolean;
+}
+
 export const AppBox = styled.div`
     background-image: url(${skyWallpaper});
     background-size: cover;
@@ -12,11 +16,13 @@ export const AppBox = styled.div`
     align-items: center;
 `;
 
-export const ChoosenBox = styled.div`
+export const ChoosenBox = styled.div<BoxProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    justify-content: center;
+    text-align: center;
+    gap: ${(props) => (props.isLogin ? '2rem' : '10rem')};
     height: 30rem;
     width: 30rem;
 
@@ -25,21 +31,54 @@ export const ChoosenBox = styled.div`
     backdrop-filter: blur(3.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+
+    @media (max-width: 500px) {
+        width: 90%;
+    }
+`;
+
+export const MaintenanceImage = styled.img`
+    width: 90%;
+    height: 80%;
+`;
+
+export const MaintenanceText = styled.h1`
+    font-size: 1.4rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    color: #701313;
+    margin-top: 2rem;
+    text-align: center;
+
+    @media (max-width: 600px) {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 1rem;
+    }
 `;
 
 export const ChoosenTitle = styled.h1`
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
     color: #363636;
     margin-top: 2rem;
+    text-align: center;
 
     @media (max-width: 600px) {
         font-size: 1.5rem;
+        width: 80%;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 1.2rem;
     }
 `;
 
-export const ChoosenBoxButtons = styled.div`
+export const ChoosenBoxContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +105,7 @@ export const ChoosenButton = styled.button`
     }
 
     @media (max-width: 600px) {
-        width: 50%;
+        width: 90%;
         max-width: 14rem;
         font-size: 0.7rem;
     }
@@ -86,6 +125,7 @@ export const AuxiliarText = styled.p`
     }
 
     @media (max-width: 600px) {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        width: 80%;
     }
 `;
