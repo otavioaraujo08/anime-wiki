@@ -2,6 +2,7 @@ import { PatternButton } from '../../../components/PatternButton';
 import { Header } from '../../../layout/Header';
 import {
     AnimeCriticalDiv,
+    AnimeCriticalDivImage,
     AnimeDescription,
     AnimeDetail,
     AnimeDetailValue,
@@ -37,6 +38,7 @@ export const MainContent = () => {
                         backgroundColor: '#F2F2F2',
                         color: '#210303',
                         border: '2px solid #210303',
+                        width: '10rem',
                     }}
                 >
                     <ArrowSquareRight size={20} color="#210303" weight="bold" />
@@ -58,7 +60,7 @@ export const MainContent = () => {
                     <AnimeDetailValue>Finalizado</AnimeDetailValue>
                 </AnimeCriticalDiv>
 
-                <AnimeCriticalDiv hideOnMobile={true}>
+                <AnimeCriticalDivImage>
                     <AnimeImage
                         alt="Fate/ Grand Order image"
                         src={FateBabylonia}
@@ -73,7 +75,7 @@ export const MainContent = () => {
                         alt="Fate/ Grand Order image"
                         src={FateSingularity}
                     />
-                </AnimeCriticalDiv>
+                </AnimeCriticalDivImage>
             </AnimeDetailsDiv>
         </Container>
     );
