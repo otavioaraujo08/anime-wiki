@@ -85,32 +85,6 @@ export const ChoosenBoxContent = styled.div`
     gap: 1rem;
 `;
 
-export const ChoosenButton = styled.button`
-    width: 15rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    background-color: #293ea5;
-    border: none;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 550;
-    line-height: 1rem;
-    letter-spacing: 1px;
-    color: #ffffff;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #1e2d7a;
-        transition: 0.3s ease-in-out;
-    }
-
-    @media (max-width: 600px) {
-        width: 90%;
-        max-width: 14rem;
-        font-size: 0.7rem;
-    }
-`;
-
 export const AuxiliarText = styled.p`
     font-size: 0.9rem;
     font-family: 'IBM Plex Sans', sans-serif;

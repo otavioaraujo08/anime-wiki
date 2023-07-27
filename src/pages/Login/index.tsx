@@ -6,11 +6,11 @@ import {
     AuxiliarText,
     ChoosenBox,
     ChoosenBoxContent,
-    ChoosenButton,
     ChoosenTitle,
     MaintenanceImage,
     MaintenanceText,
 } from './styles';
+import { PatternButton } from '../../components/PatternButton';
 
 export const Login = () => {
     const [login, setLogin] = useState(false);
@@ -47,9 +47,10 @@ export const Login = () => {
                     </ChoosenBoxContent>
                 ) : (
                     <ChoosenBoxContent>
-                        <ChoosenButton onClick={handleSetLogin}>
-                            Realizar login
-                        </ChoosenButton>
+                        <PatternButton
+                            text="Realizar login"
+                            onClick={handleSetLogin}
+                        />
 
                         <Link to="/home">
                             <AuxiliarText>
