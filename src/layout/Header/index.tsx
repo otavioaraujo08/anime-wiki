@@ -18,7 +18,12 @@ export const Header = () => {
                 <ListText>Mangás</ListText>
             </List>
 
-            <GitHubLogoStyled size={30} color="#ff0000" weight="bold" />
+            <GitHubLogoStyled
+                size={30}
+                color="#ff0000"
+                weight="bold"
+                hideOnMobile
+            />
         </HeaderComponente>
     );
 };
