@@ -4,6 +4,7 @@ interface ButtonProps {
     text: string;
     children?: React.ReactNode;
     onClick?: () => void;
+    style?: React.CSSProperties;
 }
 
 const ButtonRedirect = styled.button`
@@ -36,9 +37,14 @@ const ButtonRedirect = styled.button`
     }
 `;
 
-export const PatternButton = ({ text, children, onClick }: ButtonProps) => {
+export const PatternButton = ({
+    text,
+    children,
+    onClick,
+    style,
+}: ButtonProps) => {
     return (
-        <ButtonRedirect onClick={onClick}>
+        <ButtonRedirect style={style} onClick={onClick}>
             {text} {children}
         </ButtonRedirect>
     );
