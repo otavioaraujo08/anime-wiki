@@ -10,6 +10,7 @@ const ButtonRedirect = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     width: 15rem;
     height: 2.5rem;
     border-radius: 0.5rem;
