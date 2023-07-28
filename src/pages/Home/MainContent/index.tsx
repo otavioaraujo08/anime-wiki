@@ -57,7 +57,7 @@ export const MainContent = () => {
 
                     <AnimeDetail>Status</AnimeDetail>
 
-                    <AnimeDetailValue>Finalizado</AnimeDetailValue>
+                    <AnimeDetailValue>Desenvolvimento...</AnimeDetailValue>
                 </AnimeCriticalDiv>
 
                 <AnimeCriticalDivImage>
