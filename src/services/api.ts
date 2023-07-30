@@ -2,7 +2,9 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 export class ApiService {
     public instance = axios.create({
-        headers: {},
+        headers: {
+            'X-MAL-CLIENT-ID': "Don't steal my client id",
+        },
     });
 
     public get = async (
