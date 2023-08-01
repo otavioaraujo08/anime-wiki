@@ -11,23 +11,36 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 10rem;
+
+    @media (max-width: 1280px) {
+        gap: 3rem;
+    }
 `;
 
 export const AnimeInformationsDiv = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     margin-left: 5rem;
     margin-top: 2.5rem;
+
+    @media (max-width: 1280px) {
+        gap: 1.5rem;
+    }
 `;
 
 export const AnimeTitle = styled.h1`
-    width: 30%;
-    font-size: 3rem;
+    width: 50%;
+    font-size: 5rem;
     font-weight: 600;
     color: #ffffff;
     font-family: 'Noto Sans', sans-serif;
+
+    @media (max-width: 1280px) {
+        font-size: 3rem;
+        width: 30%;
+    }
 
     @media (max-width: 768px) {
         font-size: 2.4rem;
@@ -35,12 +48,18 @@ export const AnimeTitle = styled.h1`
 `;
 
 export const AnimeDescription = styled.h3`
-    width: 50%;
-    font-size: 1rem;
+    width: 70%;
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
     color: #c4c4c4;
     font-family: 'Noto Sans', sans-serif;
+
+    @media (max-width: 1280px) {
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
 
     @media (max-width: 768px) {
         font-size: 0.8rem;
@@ -51,8 +70,12 @@ export const AnimeDetailsDiv = styled.div`
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 5rem;
+    gap: 7rem;
     margin-left: 5rem;
+
+    @media (max-width: 1280px) {
+        gap: 5rem;
+    }
 
     @media (max-width: 768px) {
         flex-direction: column;
