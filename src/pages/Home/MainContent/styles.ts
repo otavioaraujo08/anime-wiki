@@ -48,7 +48,7 @@ export const AnimeTitle = styled.h1`
 `;
 
 export const AnimeDescription = styled.h3`
-    width: 70%;
+    width: 50%;
     font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.5rem;
@@ -56,7 +56,6 @@ export const AnimeDescription = styled.h3`
     font-family: 'Noto Sans', sans-serif;
 
     @media (max-width: 1280px) {
-        width: 50%;
         font-size: 1rem;
         line-height: 1.4rem;
     }
@@ -86,6 +85,8 @@ export const AnimeDetailsDiv = styled.div`
 
 export const AnimeCriticalDiv = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-wrap: wrap;
     text-align: center;
     gap: 1rem;
@@ -108,10 +109,14 @@ export const AnimeCriticalDivImage = styled.div`
 `;
 
 export const AnimeDetail = styled.h3`
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #c4c4c4;
     font-family: 'Noto Sans', sans-serif;
+
+    @media (max-width: 1280px) {
+        font-size: 1rem;
+    }
 
     @media (max-width: 600px) {
         font-size: 0.9rem;
@@ -119,10 +124,14 @@ export const AnimeDetail = styled.h3`
 `;
 
 export const AnimeDetailValue = styled.h3`
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #ffb703;
     font-family: 'Noto Sans', sans-serif;
+
+    @media (max-width: 1280px) {
+        font-size: 1rem;
+    }
 
     @media (max-width: 768px) {
         font-size: 0.9rem;
@@ -130,10 +139,15 @@ export const AnimeDetailValue = styled.h3`
 `;
 
 export const AnimeImage = styled.img`
-    width: 10rem;
-    height: 7rem;
+    width: 20rem;
+    height: 12rem;
     border-radius: 0.5rem;
     object-fit: cover;
+
+    @media (max-width: 1280px) {
+        width: 10rem;
+        height: 7rem;
+    }
 
     @media (max-width: 768px) {
         margin: 0.5rem 0;
