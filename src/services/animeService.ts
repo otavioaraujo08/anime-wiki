@@ -11,7 +11,7 @@ class AnimeService {
         ranking_type,
     }: AnimeListParams): Promise<void> => {
         return this.api.get(
-            `${defaultUrl}/anime/ranking?ranking_type=${ranking_type}&limit=${10}`
+            `${defaultUrl}/anime/ranking?ranking_type=${ranking_type}&limit=10`
         );
     };
 }
