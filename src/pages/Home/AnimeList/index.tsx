@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { filtersByGenre } from './filters';
 import {
     AnimeContent,
@@ -9,13 +9,30 @@ import {
     GenreName,
 } from './styles';
 import { AnimesByGenre } from '../AnimeByGenre';
+import { animeService } from '../../../services/animeService';
 
 export const AnimeList = () => {
-    const [genre, setGenre] = useState('Todos');
+    const [genre, setGenre] = useState('all');
 
     const handleSetGenre = (genre: string) => () => {
         setGenre(genre);
     };
+
+    const handleGetAnimeByGenre = async () => {
+        try {
+            const response = await animeService.getAnimeList({
+                ranking_type: genre,
+            });
+
+            console.log(response);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    useEffect(() => {
+        handleGetAnimeByGenre();
+    }, [genre]);
 
     console.log(genre);
 
