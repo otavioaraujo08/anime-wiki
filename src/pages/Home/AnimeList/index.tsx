@@ -30,9 +30,9 @@ export const AnimeList = () => {
     //     }
     // };
 
-    useEffect(() => {
-        handleGetAnimeByGenre();
-    }, [genre]);
+    // useEffect(() => {
+    //     handleGetAnimeByGenre();
+    // }, [genre]);
 
     console.log(genre);
 
