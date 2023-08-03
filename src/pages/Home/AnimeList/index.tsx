@@ -18,17 +18,17 @@ export const AnimeList = () => {
         setGenre(genre);
     };
 
-    const handleGetAnimeByGenre = async () => {
-        try {
-            const response = await animeService.getAnimeList({
-                ranking_type: genre,
-            });
+    // const handleGetAnimeByGenre = async () => {
+    //     try {
+    //         const response = await animeService.getAnimeList({
+    //             ranking_type: genre,
+    //         });
 
-            console.log(response);
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
     useEffect(() => {
         handleGetAnimeByGenre();
